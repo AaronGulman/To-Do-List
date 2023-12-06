@@ -44,6 +44,7 @@ body{
 	border-radius: 5px;
 }
 
+
 #newtask input:focus{
 	outline: none;
 	border-color: #8052ec;
@@ -64,4 +65,28 @@ body{
 	color:#ffffff;
 	cursor: pointer;
 	
+}
+
+#tasks{
+	background-color: #ffffff;
+	padding: 30px 20px;
+	margin-top: 60px;
+	border-radius: 10px;
+	box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+	width: 100%;
+	position: relative;
+
+
+}
+
+.task{
+	background-color: #ffffff;
+	height: 50px;
+	padding: 5px 10px;
+	margin-top: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	
+
 }
