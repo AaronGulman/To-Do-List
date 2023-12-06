@@ -5,14 +5,31 @@ document.querySelector('#push').onclick = function(){
 	else {
 		document.querySelector('#tasks').innerHTML
 		+= `
-		<div class='task'>
-			<span id ="taskname">
+		<div class="task">
+			<span id="taskname">
 				${document.querySelector
 				('#newtask input').value}
 			</span>
-			<button class="delete"><i class="fa-duotone fa-trash" style="--fa-primary-color: #4e1ac7; --fa-secondary-color: #4229c2;"></i>
+			<button class="delete"> <i class="fa-solid fa-trash"></i>
 			</button>
 		</div>
 		`;
+
+		let current_tasks = document.querySelectorAll('.delete');
+		for(let i=0; i < current_tasks.length; i++){
+			current_tasks[i].onclick = function(){
+				this.parentNode.remove();
+
+			}
+		}
+		let tasks = document.querySelectorAll('.task');
+		for(let i=0; i<tasks.length; i++){
+			tasks[i].onclick = function(){
+				this.classList.toggle('completed');
+
+			}
+		}
+		document.querySelector('#newtask input').value 
+		='';
 	}
 }
